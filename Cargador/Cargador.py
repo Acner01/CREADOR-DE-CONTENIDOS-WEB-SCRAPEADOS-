@@ -87,8 +87,9 @@ def CargarDatos(urls):
 
     # Creación del archivo HTML
     mi_conexion = sqlite3.connect(bdd)
+    directorio_archivo = 'C:/Users/AcnerMendezFeliz/OneDrive - Cesur-GCoremsa/Eclipse2/CREADOR-DE-CONTENIDOS-WEB-SCRAPmecaEADOS-/Cargador/Archivos'
     cursor = mi_conexion.cursor()
-    with open('Scripting.html', 'w', encoding='utf-8') as fichero:
+    with open(os.path.join(directorio_archivo, 'Scripting.html'), 'w', encoding='utf-8') as fichero:
         fichero.write("<!DOCTYPE html>\n")
         fichero.write("<html lang=\"en\">\n")
         fichero.write("<head>\n")
